@@ -1,8 +1,8 @@
 # Gym-Buddies
 
 This is a short guide on how to get the project environment setup.
-There are three different
-***DOWNLOAD TRACK-SERVER FROM MOODLE IT IS IN LECTURES SECTION BETWEEN LECTURES 19 and 20!
+There are three different things you have to run at the same time.
+***DOWNLOAD TRACK-SERVER FROM MOODLE. IT IS IN LECTURES SECTION BETWEEN LECTURES 19 and 20!
 1) Setting up MongoDB
 	*I invited each of your college emails to my MongoDB project with project owner permissions.
 	*Join the project and go to the database cluster and click connect on the right. 
@@ -28,8 +28,7 @@ There are three different
 	*So you will do npm start to start the track server, expo start to start gym-buddy, and the ngrok http 3000 
 	 and URL change.
 
-
-
+***run 'npm install --legacy-peer-deps' for node modules
 ***go to node_modules/react-navigation-tabs/lib-module/utils/withDimensions.js and comment out line 57 if signout is acting funny
 
 (These are just the commands used to build the node modules)
@@ -45,5 +44,8 @@ ngrok http 3000
 npm install @react-native-async-storage/async-storage --legacy-peer-deps
 npm install react-native-maps --legacy-peer-deps
 npm install expo-location --legacy-peer-deps
+
+
+
 
 
