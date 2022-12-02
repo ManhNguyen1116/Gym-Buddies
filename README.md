@@ -2,6 +2,7 @@
 
 This is a short guide on how to get the project environment setup.
 There are three different
+***DOWNLOAD TRACK-SERVER FROM MOODLE IT IS IN LECTURES SECTION BETWEEN LECTURES 19 and 20!
 1) Setting up MongoDB
 	*I invited each of your college emails to my MongoDB project with project owner permissions.
 	*Join the project and go to the database cluster and click connect on the right. 
