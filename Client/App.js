@@ -9,8 +9,12 @@ import SignupScreen from './src/screens/SignupScreen';
 import TrackCreateScreen from './src/screens/TrackCreateScreen';
 import TrackDetailScreen from './src/screens/TrackDetailScreen';
 import TrackListScreen from './src/screens/TrackListScreen';
+import workoutExercises from './src/screens/workoutExercises';
+import workoutNotes from './src/screens/workoutNotes';
+import workoutSchedule from './src/screens/workoutSchedule';
 import {Provider as AuthProvider} from "./src/context/AuthContext";
 import {setNavigator} from './src/navigationRef'
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const switchNavigator = createSwitchNavigator({
   ResolveAuth: ResolveAuthScreen,
@@ -19,12 +23,46 @@ const switchNavigator = createSwitchNavigator({
     Signin: SigninScreen
   }),
   mainFlow: createBottomTabNavigator({
-    trackListFlow: createStackNavigator({
-      TrackList: TrackListScreen,
-      TrackDetail: TrackDetailScreen
-    }),
-    TrackCreate: TrackCreateScreen,
-    Account: AccountScreen
+    trackListFlow: {
+      screen: createStackNavigator({
+        TrackList: TrackListScreen,
+        Exercises: workoutExercises,
+        Notes: workoutNotes,
+        Schedule: workoutSchedule,
+        TrackDetail: TrackDetailScreen
+      },
+      {
+        defaultNavigationOptions: {
+          title: "Gym Buddies"
+        }
+      
+      }
+      ),
+      navigationOptions: {
+        tabBarLabel: ' ',
+        tabBarIcon: ({tintColor}) => {
+          return (<Icon name="barbell" size={40} color="black"/>);
+        },
+      },
+    },
+    TrackCreate: { 
+      screen: TrackCreateScreen,
+      navigationOptions: {
+        tabBarLabel: ' ',
+        tabBarIcon: ({tintColor}) => {
+          return (<Icon name="location-outline" size={35} color="black" />);
+        },
+      },
+    },
+    Account: {
+      screen: AccountScreen,
+      navigationOptions: {
+        tabBarLabel: ' ',
+        tabBarIcon: ({tintColor}) => {
+          return (<Icon name="settings-outline" size={35} color="black" />);
+        },
+      }
+    }
   })
 });
 
