@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 import {StyleSheet, View} from 'react-native'
 import Map from '../components/Map'
 import {Text} from 'react-native-elements'
-import {requestForegroundPermissionsAsync, watchPositionAsync} from 'expo-location';
+import {requestForegroundPermissionsAsync} from 'expo-location';
 
 const TrackCreateScreen = () => {
 

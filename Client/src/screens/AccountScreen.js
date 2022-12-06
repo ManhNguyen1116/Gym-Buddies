@@ -8,7 +8,7 @@ const AccountScreen = () => {
     const {signout} = useContext(AuthContext);
 
     return <View style={styles.container}>
-        <Text styles={{fontSize: 48}}>AccountScreen</Text>
+        <Text styles={{fontSize: 48}}>Account</Text>
         <Spacer>
             <Button title="Sign Out" onPress={() => {signout()}}/>
         </Spacer>
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        marginTop: 100
+        marginTop: 100,
     }
 });
 
