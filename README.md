@@ -1,4 +1,10 @@
 # Gym-Buddies
+****Just download the project as a zip file and extract it. Then go to client, install node modules using npm install --legacy-peer-deps.
+    Go to server and install node modules using npm install. For the server, we have a shared MongoDB user, so you can just straight up use it now.
+    Follow same instructions as below guide for ngrok (if you are getting request timeouts, do ngrok http --region=eu 3000).
+    expo start to run client, and npm run dev to run the server. Now your coding environment is ready!
+
+
 
 This is a short guide on how to get the project environment setup.
 There are three different things you have to run at the same time.
@@ -25,7 +31,7 @@ There are three different things you have to run at the same time.
 	    change the baseURL to accomodate this. 
 3) That is pretty much it. The point of this is for everyone to realize that we have to be running three different things at once:
 	track-server, gym-buddy, and ngrok 
-	*So you will do npm start to start the track server, expo start to start gym-buddy, and the ngrok http 3000 
+	*So you will do npm run dev to start the track server, expo start to start gym-buddy, and the ngrok http 3000 
 	 and URL change.
 
 ***run 'npm install --legacy-peer-deps' for node modules
